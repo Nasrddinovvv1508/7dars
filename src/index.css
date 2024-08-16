@@ -8,3 +8,12 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.text-gradient {
+    color: #cb2cf2;
+    background-image: -webkit-linear-gradient(0deg, #cb2cf2 11%, #e3cc02 27%, #ff5722 84%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
