@@ -6,7 +6,7 @@ function Navbar() {
     <div className="bg-base-300">
       <div className='navbar speacial-container'>
         <div className="flex-1">
-          <Link to={`/`} className="bg-red-600 py-2 px-4 rounded-lg text-white font-bold text-xl">Store</Link>
+          <Link to={`/`} className="bg-red-600 hover:bg-red-800 py-2 px-4 rounded-lg text-white font-bold text-xl">Store</Link>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1 text-lg gap-3">
