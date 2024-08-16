@@ -14,9 +14,9 @@ function Navbar() {
             <li>
               <details>
                 <summary>Pages</summary>
-                <ul className="bg-base-100 rounded-t-none p-2 w-[190px]">
+                <ul className="bg-base-100 rounded-t-none p-2 w-[190px] z-10">
                   <li><NavLink to={`/about`}>About</NavLink></li>
-                  <li><NavLink to={`/products`}>Products</NavLink></li>
+                  <li className='mt-2'><NavLink to={`/products`}>Products</NavLink></li>
                 </ul>
               </details>
             </li>
