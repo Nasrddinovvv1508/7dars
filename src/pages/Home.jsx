@@ -17,7 +17,7 @@ function Home() {
             </p>
 
             <div className='mt-6 text-lg text-white'>
-              <p>You really want to know <span className='text-[#2b3440]'>about us</span> ??</p>
+              <p>You really want to know <span className='text-[#2b3440] font-medium capitalize'>about us</span> ??</p>
               <div className='mt-5 pl-2'>
                 <Link to={`/about`} className='btn btn-error py-2 px-4 rounded-lg text-white font-bold text-xl'>About</Link>
               </div>
@@ -25,7 +25,6 @@ function Home() {
           </div>
         </div>
       </section>
-
 
       <section className='pt-[70px] bg-[#0977d6]'>
         <div className='speacial-container grid grid-cols-2 items-center gap-[140px]'>
