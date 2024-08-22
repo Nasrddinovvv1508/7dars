@@ -17,3 +17,15 @@
     text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
 }
+
+.no-products {
+    font-size: 5rem;
+    font-weight: bold;
+    opacity: 60%;
+    color: #ccc;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
