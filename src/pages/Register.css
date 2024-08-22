@@ -161,7 +161,8 @@
     width: 250px;
     height: 40px;
     border-radius: 5px;
-    border: 2px solid var(--main-color);
+    border-width: 2px;
+    border-style: solid;
     background-color: var(--bg-color);
     box-shadow: 4px 4px var(--main-color);
     font-size: 15px;
@@ -177,7 +178,9 @@
 }
 
 .flip-card__input:focus {
-    border: 2px solid var(--input-focus);
+    border-width: 2px;
+    border-style: solid;
+    /* var(--input-focus) */
 }
 
 .flip-card__btn:active,
