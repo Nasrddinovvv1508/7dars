@@ -11,9 +11,11 @@ import Register from './pages/Register';
 
 // components
 import ProtectedRoutes from './components/ProtectedRoutes';
+import { useSelector } from 'react-redux';
 
 function App() {
-  let [user, setUser] = useState(false);
+  let { user } = useSelector((state) => state.user)
+  console.log(user);
   let routes = createBrowserRouter([
     {
       path: `/`,
@@ -42,7 +44,7 @@ function App() {
     //   element: user ? <Navigate to={`/`} /> : <Login />
     // },
     {
-      path: `/register`,
+      path: `/enter`,
       element: user ? <Navigate to={`/`} /> : <Register />
     }
   ])

@@ -1,7 +1,24 @@
+import { signOut } from 'firebase/auth';
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { auth } from '../firebase/firebaseConfig';
+import { useDispatch } from 'react-redux';
+import { logOut } from '../app/userSlice';
 
 function Navbar() {
+  let dispatch = useDispatch()
+
+  let logout = async () => {
+    if (window.confirm(`Are You Sure`)) {
+      try {
+        await signOut(auth);
+        dispatch(logOut())
+      } catch (error) {
+        console.error("An error happened during sign-out:", error);
+      }
+    }
+  }
+
   return (
     <div className="bg-base-300">
       <div className='navbar speacial-container'>
@@ -20,12 +37,14 @@ function Navbar() {
                 </ul>
               </details>
             </li>
+            <li>
+              <button onClick={logout} className='btn btn-error text-white'>Log Out</button>
+            </li>
           </ul>
         </div>
       </div>
-
     </div>
   )
 }
 
-export default Navbar
+export default Navbar;

@@ -5,7 +5,7 @@ function ProtectedRoutes({ user, children }) {
     if (user) {
         return children
     } else {
-        return <Navigate to={'/register'} />
+        return <Navigate to={'/enter'} />
     }
 }
 
