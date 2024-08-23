@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 let initialState = {
     products: [
@@ -41,16 +42,26 @@ let productSlice = createSlice({
     initialState,
     reducers: {
         addToCart: (state, { payload }) => {
-
+            state.cartProducts = [...state.cartProducts, payload];
         },
         deleteProd: (state, { payload }) => {
-
+            state.products = state.products.filter((prod) => {
+                return prod.id != payload;
+            });
+            state.cartProducts = state.cartProducts.filter((prod) => {
+                return prod.id != payload
+            });
         },
         createProd: (state, { payload }) => {
-
+            
         },
+        removeFromCart: (state, { payload }) => {
+            state.cartProducts = state.cartProducts.filter((prod) => {
+                return prod.id != payload
+            });
+        }
     }
 })
 
-export let { addToCart, deleteProd, createProd } = productSlice.actions
+export let { addToCart, deleteProd, createProd, removeFromCart } = productSlice.actions
 export default productSlice.reducer

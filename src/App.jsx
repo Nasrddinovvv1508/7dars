@@ -20,7 +20,6 @@ function App() {
   let dispatch = useDispatch();
 
   let { user, isAuthReady } = useSelector((state) => state.user)
-  console.log(user);
   let routes = createBrowserRouter([
     {
       path: `/`,
